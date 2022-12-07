@@ -40,31 +40,18 @@ public static class Shared
 
         return root;
     }
-    
-    public static List<int> GetSizes(Func<int, bool> compareFunc, Directory start)
-    {
-        var matches = new List<int>();
-        foreach (var dir in start.SubDirectories)
-        {
-            if ( compareFunc(dir.Size())) matches.Add(dir.Size());
-            matches.AddRange(GetSizes(compareFunc, dir));
-        }
-        
-        return matches;
-    }
 }
 
 public class Directory
 {
-    public string Name { get; set; }
-    public Directory? Parent { get; set; }
-    public List<Directory> SubDirectories { get; set; } = new();
+    public string Name { get; init; } = string.Empty;
+    public Directory? Parent { get; init; }
+    public List<Directory> SubDirectories { get; } = new();
 
     public int FileSize { get; set; }
     
-    public int Size()
-    {
-        var total = FileSize + SubDirectories.Sum(x => x.Size());
-        return total;
-    }
+    public IEnumerable<Directory> AllDirectories =>
+        SubDirectories.Concat(SubDirectories.SelectMany(x => x.AllDirectories));
+    
+    public int Size => FileSize + SubDirectories.Sum(x => x.Size);
 }

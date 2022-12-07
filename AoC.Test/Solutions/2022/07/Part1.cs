@@ -10,6 +10,8 @@ public class Part1 : IPart
         
         var root = Shared.BuildDirectories(lines);
 
-        return Shared.GetSizes(x => x < 100000, root).Sum().ToString();
+        return root.AllDirectories
+            .Aggregate(0, (acc, x) => x.Size < 100000 ? acc + x.Size : acc)
+            .ToString();
     }
 }
