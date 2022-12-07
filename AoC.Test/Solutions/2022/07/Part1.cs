@@ -7,7 +7,9 @@ public class Part1 : IPart
     public string? Execute(string input)
     {
         var lines = IPart.ParseInput(input, "\n");
+        
+        var root = Shared.BuildDirectories(lines);
 
-        return null;
+        return Shared.GetSizes(x => x < 100000, root).Sum().ToString();
     }
 }
