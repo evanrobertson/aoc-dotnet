@@ -5,22 +5,11 @@ namespace AoC.Test.Solutions._2022._05;
 
 public class Part1 : IPart
 {
-    private static IEnumerable<string> GetStacks(string input) =>
-        input.Split("\n\n")[0].Split("\n").TakeWhile(x => !x.Trim().StartsWith("1"));
-
-    private static IEnumerable<(int, int, int)> GetMoves(IEnumerable<string> input)
-    {
-        var regex = new Regex(@"move (\d+) from (\d+) to (\d+)");
-        var moves = input.Where(x => x.StartsWith("move"));
-        return moves.Select(x => regex.Match(x)).Select(x => (int.Parse(x.Groups[1].Value),
-            int.Parse(x.Groups[2].Value), int.Parse(x.Groups[3].Value)));
-    }
-    
-    public string? Execute(string input)
+   public static string Execute(string input)
     {
         var lines = IPart.ParseInput(input, "\n");
-        var stackInput = GetStacks(input);
-        var moves = GetMoves(lines);
+        var stackInput = Shared.GetStacks(input);
+        var moves = Shared.GetMoves(lines);
 
         var stacks = new List<Stack<char>>();
 

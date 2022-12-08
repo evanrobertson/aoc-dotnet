@@ -4,12 +4,9 @@ namespace AoC.Test.Solutions._2022._03;
 
 public class Tests : BaseTests<Part1, Part2, Input>
 {
-    public Tests()
-    {
-        Part1ExampleResult = "157";
-        Part1UserResult = "8039";
-
-        Part2ExampleResult = "70";
-        Part2UserResult = "2510";
-    }
+    public Tests() : base(new Results(
+        part1ExampleResult: "157",
+        part1UserResult: "8039", 
+        part2ExampleResult: "70",
+        part2UserResult: "2510")) { }
 }

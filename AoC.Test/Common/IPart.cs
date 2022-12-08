@@ -4,5 +4,5 @@ public interface IPart
 {
     static IEnumerable<string> ParseInput(string input, string separator) => input.Split(separator);
 
-    string? Execute(string input);
+    static abstract string? Execute(string input);
 }

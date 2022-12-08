@@ -4,14 +4,14 @@ namespace AoC.Test.Solutions._2022._03;
 
 public class Input : IInput
 {
-    public string Example => @"vJrwpWtwJgWrhcsFMMfFFhFp
+    public static string Example => @"vJrwpWtwJgWrhcsFMMfFFhFp
 jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
 PmmdzqPrVvPwwTWBwg
 wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
 ttgJtRGJQctTZtZT
 CrZsJsPPZsGzwwsLwLmpwMDw";
 
-    public string User => @"qFdBBvtHHfvRlfvsqldvqjPpQmnQmjnjjjTRTLGRNG
+    public static string User => @"qFdBBvtHHfvRlfvsqldvqjPpQmnQmjnjjjTRTLGRNG
 ZCWhhCsJCzSJzSbzgsmPTGNNPPNGjgLTLjgn
 WJZsbJMwJcszJcScwhVltFwBFBlqddvFdHDfqq
 crtTsGTtqFThGQGCrsjTwdNJwpRdnJJwffRClpSf

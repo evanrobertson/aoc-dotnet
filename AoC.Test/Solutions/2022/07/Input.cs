@@ -4,7 +4,7 @@ namespace AoC.Test.Solutions._2022._07;
 
 public class Input : IInput
 {
-    public string Example => @"$ cd /
+    public static string Example => @"$ cd /
 $ ls
 dir a
 14848514 b.txt
@@ -28,7 +28,7 @@ $ ls
 5626152 d.ext
 7214296 k";
 
-    public string User => @"$ cd /
+    public static string User => @"$ cd /
 $ ls
 dir plws
 dir pwlbgbz

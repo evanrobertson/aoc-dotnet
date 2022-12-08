@@ -4,7 +4,7 @@ namespace AoC.Test.Solutions._2022._01;
 
 public class Input : IInput
 {
-    public string Example => @"1000
+    public static string Example => @"1000
         2000
         3000
 
@@ -19,7 +19,7 @@ public class Input : IInput
 
         10000";
     
-    public string User => @"5557
+    public static string User => @"5557
 6663
 3952
 4750

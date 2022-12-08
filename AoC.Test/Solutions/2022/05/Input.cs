@@ -4,7 +4,7 @@ namespace AoC.Test.Solutions._2022._05;
 
 public class Input : IInput
 {
-    public string Example => @"    [D]    
+    public static string Example => @"    [D]    
 [N] [C]    
 [Z] [M] [P]
  1   2   3 
@@ -14,7 +14,7 @@ move 3 from 1 to 3
 move 2 from 2 to 1
 move 1 from 1 to 2";
     
-    public string User => @"[F]         [L]     [M]            
+    public static string User => @"[F]         [L]     [M]            
 [T]     [H] [V] [G] [V]            
 [N]     [T] [D] [R] [N]     [D]    
 [Z]     [B] [C] [P] [B] [R] [Z]    

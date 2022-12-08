@@ -2,7 +2,7 @@ namespace AoC.Test.Common;
 
 public interface IInput
 {
-    string Example { get; }
+    static abstract string Example { get; }
     
-    string User { get; }
+    static abstract string User { get; }
 }

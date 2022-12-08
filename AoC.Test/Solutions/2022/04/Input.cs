@@ -4,14 +4,14 @@ namespace AoC.Test.Solutions._2022._04;
 
 public class Input : IInput
 {
-    public string Example => @"2-4,6-8
+    public static string Example => @"2-4,6-8
 2-3,4-5
 5-7,7-9
 2-8,3-7
 6-6,4-6
 2-6,4-8";
 
-    public string User => @"51-88,52-87
+    public static string User => @"51-88,52-87
 41-55,22-56
 6-74,74-86
 51-98,52-86

@@ -4,11 +4,11 @@ namespace AoC.Test.Solutions._2022._02;
 
 public class Input : IInput
 {
-    public string Example => @"A Y
+    public static string Example => @"A Y
 B X
 C Z";
 
-    public string User => @"C X
+    public static string User => @"C X
 A Y
 C Z
 B Y

@@ -4,7 +4,7 @@ namespace AoC.Test.Solutions._2022._03;
 
 public class Part2 : IPart
 {
-    public string? Execute(string input)
+    public static string Execute(string input)
     {
         var lines = IPart.ParseInput(input, "\n");
         var stack = new Stack<string>(lines);
